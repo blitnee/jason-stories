@@ -10,74 +10,53 @@
 	</head>
 
 	<body>
+		<!-- ROUND MENU -->
+		<nav class="menu">
+			<i id="hamburger" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+			<div id="drawer">
+				<ul class="menu__list">
+					<li><a href="#">i</a></li>
+					<li><a href="#">love</a></li>
+					<li><a href="#">stories</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- TITLES -->
+		<div class="titles">
+			<h3 class="mainTitle titleFont w3-animate-opacity">Tales from an Alien</h3>
+			<h3 class="subTitle titleFont w3-animate-opacity">An alternate reality daydream series</h3>
+		</div>
 		<div class="container">
-			<nav class="menu">
-				<div id="drawer">
-					<ul class="menu__list no__style">
-						<li><a class="no__link" href="">i</a></li>
-						<li><a class="no__link" href="">love</a></li>
-						<li><a class="no__link" href="">stories</a></li>
-					</ul>
+			<!-- STORY LIST -->
+			<div class="storyList">
+				<div id="storyContainer">
+						<ul data-bind="foreach: stories" id="story_list">
+							<li data-bind="text: title, click: $parent.setStory" class="title titleFont color w3-animate-left space">
+							</li>
+						</ul>
 				</div>
-				<i id="hamburger" class="fa fa-bars fa-2x" aria-hidden="true"></i>
-			</nav>
-			<div class="nextTo">
-			<main id="main">
-				<div class="">
-					<h1 class="title color w3-animate-left">Alien Encounter</h1>
+			</div>
+			<!-- STORY BLOCK -->
+			<article data-bind="with: currentStory" class="story_block">
+				<h3 data-bind="text: title" class="story_title titleFont"></h3>
+				<div data-bind="html: script" class="story">
 				</div>
-				<div class="space">
-					<h1 class="title color w3-animate-left">Boy B Ball Star</h1>
-				</div>
-				<div class="space">
-					<h1 class="title color w3-animate-left">Animal Talker</h1>
-				</div>
-				<div class="space">
-					<h1 class="title color w3-animate-left">Best Birds</h1>
-				</div>
-				<div class="space">
-					<h1 class="title color w3-animate-left">The Great Banana Conflict</h1>
-				</div>
-				<div class="space">
-					<h1 class="title color w3-animate-left">Chocolate Star</h1>
-				</div>
-				<header class="block__text">
-					<div class="sub__title">
-						<h3 class="sub__line w3-animate-opacity">Tales from an Alien</h3>
-						<h3 class="sub__line w3-animate-opacity">An alternate reality daydream series</h3>
-					</div>
-				</header>
-				<article class="block__text chatter">
-					<p>Lorem ipsum dolor sit amet, per in noster maiestatis. In nec movet viris. At has accumsan scriptorem, quo brute intellegam cu. Sea denique omittam molestiae no.
-					<br>
-
-					Mollis malorum ei est, saepe nominati scriptorem et mel. Ea eum mucius prodesset consequuntur, sale solum scaevola in ius, suscipit detraxit eleifend vis ea. Hinc ferri iuvaret duo ea. Mea ea tota minim. Ne tollit invenire consequuntur sea, graeci voluptatum.
-					<br>
-
-					Lorem ipsum dolor sit amet, per in noster maiestatis. In nec movet viris. At has accumsan scriptorem, quo brute intellegam cu. Sea denique omittam molestiae no.
-					<br>
-
-					Mollis malorum ei est, saepe nominati scriptorem et mel. Ea eum mucius prodesset consequuntur, sale solum scaevola in ius, suscipit detraxit eleifend vis ea. Hinc ferri iuvaret duo ea. Mea ea tota minim. Ne tollit invenire consequuntur sea, graeci voluptatum.
-					</p>
-				</article>
-			</main>
-
+			</article>
 		</div>
 		<script>
-		// menu operation
+		// MENU OPERATION
         var hamburger = document.querySelector('#hamburger');
         var main = document.querySelector('#main');
         var drawer = document.querySelector('#drawer');
         hamburger.addEventListener('click', function() {
             drawer.classList.toggle('open');
         });
-        main.addEventListener('click', function() {
-            drawer.classList.remove('open');
-        });
+       // main.addEventListener('click', function() {
+         //   drawer.classList.remove('open');
+        //});
     	</script>
-
-
-		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/libs/jquery-3.1.1.min.js"></script>
+		<script src="js/libs/knockout-3.2.0.js"></script>
     	<script async src="js/script.js"></script>
     	<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">

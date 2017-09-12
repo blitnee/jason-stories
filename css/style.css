@@ -8,49 +8,58 @@ h1 {
 	margin-bottom: 2em;
 	width: 90%;
 }
-
+ul {
+	list-style-type: none;
+}
+li a {
+	text-decoration: none;
+	color: inherit;
+}
 a:hover {
 	color: #E39E57;
 }
-
 ::-webkit-scrollbar {
 display: none;
 }
 
-.no__style {
-	list-style-type: none;
+/* * * * * * DOCUMENT * * * * * */
+#main {
+ overflow-y: scroll;
+}
+.titles {
+    margin: .2em 0 0 .5em;
+    padding: 0;
+}
+.titleFont {
+	font-family: 'Playfair Display', serif;
+}
+.mainTitle {
+	font-size: 25px;
+	margin: 0;
+}
+.subTitle {
+	font-size: 1em;
+	margin: 0;
 }
 
-.no__link {
-	text-decoration: none;
-	color: inherit;
-}
-
-/*
- *
- * NAVIGATION
- *
- */
-.menu {
-}
-
-.menu__list {
-	color: #FFFFFF;
-	padding-top: 2em;
-	text-align: center;
-	line-height: 2.5em;
-}
-
+/* * * * * * NAVIGATION * * * * * */
 #hamburger {
 	position: fixed;
     top: .3em;
     right: .5em;
 }
-
+.menu__list {
+	color: #FFFFFF;
+    padding-left: 20px;
+    padding-top: 25px;
+    margin: 0px;
+	text-align: center;
+	line-height: 2.5em;
+}
 #drawer {
     position: fixed;
-    bottom: -140px;
-    left: -95px;
+    bottom: -180px;
+    left: -110px;
     width: 350px;
 	height: 350px;
 	background: #016590;
@@ -62,67 +71,45 @@ display: none;
     transform: translate(-400px, 0);
     transition: transform 0.5s ease;
 }
-
 #drawer.open {
     position: fixed;
     -webkit-transform: translate(0, 0); /* Safari */
     transform: translate(0, 0);
 }
 
-
-
-
-
-/*//////////REMEMBER*/
-#main {
- overflow-y: scroll;
-}
-
-
-/*
- *
- * TITLE
- *
- */
-.block__text {
-	box-sizing: border-box;
-	margin: 1em;
-}
-
+/* * * * * * TITLE * * * * * */
 .title {
-    font-size: 23px;
+    font-size: 108%;
     text-align: right;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    background: #016590;
+    background-color: #016590;
     color: #fff;
+    border: 6px solid #016F8E;
     box-shadow: 10px 10px 5px #888888;
     border-radius: 0 10px 10px 0;
-    margin: 0 3em 0 -2em;
-    padding: 0 .5em .1em;
+    margin: 1.5em 1em 0 -4em;
+    padding: .2em 1em .2em .2em;
+    max-width: 900px;
+    position: inherit;
 }
 
-.sub__title {
-	margin-top: 2em;
+.container {
+	display: inline-flex;
+    width: 100%;
 }
 
-.sub__line {
-	font-family: 'Playfair Display', serif;
-	font-size: 25px;
-	padding: 0;
-	margin: 0;
+.storyList {
+	width: 40%;
 }
 
-.chatter {
-	margin-top: 2em;
-
+.story_block {
+	width: 40%;
+	margin: 1em;
 }
-
 
 
 
 /*///EXPERIMENTS///*/
-
 .circle__1x {
     height:100vh;
     width:40vw;
@@ -130,14 +117,6 @@ display: none;
     background: black
 }
 
-.space {
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
-
-.color {
-	background: #1c798e;
-}
 
 
 
